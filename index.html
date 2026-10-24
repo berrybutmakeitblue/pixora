@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100d1c">
+    <title>Pixora — Your Creative Photocard Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">pixora<span>✦</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#studio">Studio</a>
+            <a href="#templates">Templates</a>
+        </nav>
+
+        <a href="#studio" class="nav-button">Start Creating ↗</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">✦ YOUR CREATIVITY, YOUR RULES ✦</p>
+
+                <h1>Every photo has a <span>little magic.</span></h1>
+
+                <p class="hero-description">
+                    Turn your favorite pictures into beautiful photocards.
+                    Choose a style, add your personal touch, and make it yours.
+                </p>
+
+                <a href="#studio" class="primary-button">
+                    Create your photocard ✨
+                </a>
+
+                <p class="hero-note">♡ Made by you, treasured forever.</p>
+            </div>
+
+            <div class="hero-art">
+                <div class="floating-star star-one">✦</div>
+                <div class="floating-star star-two">✧</div>
+                <div class="floating-star star-three">✦</div>
+
+                <div class="sample-card">
+                    <div class="sample-image">
+                        <span>YOUR PHOTO GOES HERE</span>
+                    </div>
+                    <div class="sample-caption">
+                        <span>YOUR LITTLE WORLD</span>
+                        <span>♡</span>
+                    </div>
+                </div>
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+            </div>
+        </section>
+
+        <section class="studio-section" id="studio">
+            <div class="section-heading">
+                <p class="eyebrow">✦ LET'S MAKE SOMETHING ✦</p>
+                <h2>Your creative <span>studio.</span></h2>
+                <p>Choose a photo, pick your aesthetic, and create.</p>
+            </div>
+
+            <div class="studio">
+                <aside class="editor-panel">
+                    <div class="panel-heading">
+                        <span>01 / YOUR PHOTO</span>
+                    </div>
+
+                    <label for="photoUpload" class="upload-box">
+                        <span class="upload-icon">＋</span>
+                        <strong>Upload your photo</strong>
+                        <small>Choose an image from your device</small>
+                    </label>
+
+                    <input
+                        type="file"
+                        id="photoUpload"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <div class="control-group">
+                        <label for="cardName">Your caption</label>
+                        <input
+                            type="text"
+                            id="cardName"
+                            maxlength="40"
+                            placeholder="e.g. My little universe"
+                        >
+                    </div>
+
+                    <div class="control-group">
+                        <label for="cardTheme">Choose your aesthetic</label>
+                        <select id="cardTheme">
+                            <option value="galaxy">Dreamy Galaxy 🌙</option>
+                            <option value="coquette">Coquette 🎀</option>
+                            <option value="dark">Dark Elegance 🖤</option>
+                            <option value="pastel">Pastel Dreams ☁️</option>
+                            <option value="rainbow">Color Pop 🌈</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="cardText">Add a little message</label>
+                        <textarea
+                            id="cardText"
+                            maxlength="100"
+                            placeholder="Write something special..."
+                        ></textarea>
+                    </div>
+
+                    <button id="downloadButton" class="primary-button full-button">
+                        Download my photocard ↓
+                    </button>
+
+                    <p class="privacy-note">
+                        ♡ Your photo stays in your browser.
+                    </p>
+                </aside>
+
+                <div class="preview-panel">
+                    <div class="preview-heading">
+                        <span>02 / LIVE PREVIEW</span>
+                        <span class="live-indicator">● LIVE</span>
+                    </div>
+
+                    <div class="card-stage">
+                        <div class="photocard galaxy" id="photocard">
+                            <div class="card-decoration decoration-top">✦ ✧ ✦</div>
+
+                            <div class="card-photo" id="cardPhoto">
+                                <div class="photo-placeholder" id="photoPlaceholder">
+                                    <span>✧</span>
+                                    <strong>Your photo belongs here.</strong>
+                                    <small>Upload an image to begin.</small>
+                                </div>
+                            </div>
+
+                            <div class="card-information">
+                                <h3 id="previewName">YOUR LITTLE UNIVERSE ♡</h3>
+                                <p id="previewText">A moment, made magical.</p>
+                            </div>
+
+                            <div class="card-decoration decoration-bottom">☾ ✦ ♡ ✦</div>
+                        </div>
+                    </div>
+
+                    <p class="preview-note">
+                        Your design updates as you customize it.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="templates-section" id="templates">
+            <div class="section-heading">
+                <p class="eyebrow">✦ FIND YOUR VIBE ✦</p>
+                <h2>A little style, <span>a lot of you.</span></h2>
+                <p>Explore the aesthetics available in your studio.</p>
+            </div>
+
+            <div class="template-grid">
+                <button class="template-card template-galaxy" data-theme="galaxy">
+                    <span class="template-symbol">☾ ✦</span>
+                    <strong>Dreamy Galaxy</strong>
+                    <small>Cosmic and magical</small>
+                </button>
+
+                <button class="template-card template-coquette" data-theme="coquette">
+                    <span class="template-symbol">୨୧ ♡</span>
+                    <strong>Coquette</strong>
+                    <small>Soft and romantic</small>
+                </button>
+
+                <button class="template-card template-dark" data-theme="dark">
+                    <span class="template-symbol">✧ ◈</span>
+                    <strong>Dark Elegance</strong>
+                    <small>Bold and mysterious</small>
+                </button>
+
+                <button class="template-card template-pastel" data-theme="pastel">
+                    <span class="template-symbol">☁ ♡</span>
+                    <strong>Pastel Dreams</strong>
+                    <small>Gentle and dreamy</small>
+                </button>
+
+                <button class="template-card template-rainbow" data-theme="rainbow">
+                    <span class="template-symbol">✿ ✦</span>
+                    <strong>Color Pop</strong>
+                    <small>Bright and playful</small>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="logo">pixora<span>✦</span></a>
+        <p>Your photos. Your aesthetic. Your creation.</p>
+        <small>Made with ♡ and a little imagination.</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+      </html>
